@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4 foto 1 word</title>
+    <style>
+        .cell{
+            height:50px;
+            width:50px;
+            border: 2px solid black;
+            display: inline-block;
+            margin: 2px;
+        }
+        .bg {
+            background:url('abstract-blue-background.jpg');
+            background-repeat:no-repeat;
+            background-position: bottom;
+            background-size: cover;
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg">
+<center>
+    <img src="fastfood.jpg" height="150">
+    <img src="flag.jpg" height="150">
+    <br>
+    <img src="gorod.jpg" height="150">
+    <img src="statue.jpg" height="150">
+    <div class="row">
+        <div class="cell"></div>
+         <div class="cell"></div>
+         <div class="cell"></div>
+    </div>
+    <div class="row">
+        <div class="cell" id="1" onclick="tap(this.id)">ф</div>
+        <div class="cell" id="2" onclick="tap(this.id)">с</div>
+        <div class="cell" id="3" onclick="tap(this.id)">а</div>
+        <div class="cell" id="4" onclick="tap(this.id)">н</div>
+        <div class="cell" id="5" onclick="tap(this.id)">е</div>
+        <div class="cell" id="6" onclick="tap(this.id)">г</div>
+        <div class="cell" id="7" onclick="tap(this.id)">о</div>
+        <div class="cell" id="8" onclick="tap(this.id)">у</div>
+        <div class="cell" id="9" onclick="tap(this.id)">м</div>
+        <div class="cell" id="10" onclick="tap(this.id)">ь</div>
+    </div>
+    <div class="row">
+        <div class="cell" id="11" onclick="tap(this.id)">щ</div>
+        <div class="cell" id="12" onclick="tap(this.id)">й</div>
+        <div class="cell" id="13" onclick="tap(this.id)">ш</div>
+        <div class="cell" id="14" onclick="tap(this.id)">я</div>
+        <div class="cell" id="15" onclick="tap(this.id)">а</div>
+        <div class="cell" id="16" onclick="tap(this.id)">т</div>
+        <div class="cell" id="17" onclick="tap(this.id)">р</div>
+        <div class="cell" id="18" onclick="tap(this.id)">ч</div>
+        <div class="cell" id="19" onclick="tap(this.id)">з</div>
+        <div class="cell" id="20" onclick="tap(this.id)">э</div>
+    </div>
+</center>
+</body>
+<script>
+    function tap(clicked_id) {
+        if(document.getElementsByClassName("cell")[0].innerHTML=="") {
+            document.getElementsByClassName("cell")[0].innerHTML = document.getElementById(clicked_id).innerHTML
+        }else if(document.getElementsByClassName("cell")[1].innerHTML=="") {
+            document.getElementsByClassName("cell")[1].innerHTML = document.getElementById(clicked_id).innerHTML
+
+
+        }else if(document.getElementsByClassName("cell")[2].innerHTML==""){
+            document.getElementsByClassName("cell")[2].innerHTML=document.getElementById(clicked_id).innerHTML
+            if (document.getElementsByClassName("cell")[0].innerHTML+document.getElementsByClassName("cell")[1].innerHTML+document.getElementsByClassName("cell")[2].innerHTML=="сша"){
+                alert("you win")
+            }
+            else{
+                console.log(document.getElementsByClassName("cell")[0].innerHTML+document.getElementsByClassName("cell")[1].innerHTML+document.getElementsByClassName("cell")[2].innerHTML)
+                alert("you wrong")
+                document.getElementsByClassName("cell")[0].innerHTML=""
+                document.getElementsByClassName("cell")[1].innerHTML=""
+                document.getElementsByClassName("cell")[2].innerHTML=""
+
+            }
+        }
+    }
+</script>
+</html>
